@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashour Ghaben — Full Stack Developer</title>
+<meta name="description" content="Ashour Mundhar Abu Ghaben — Full Stack Laravel Developer & AI Tools Expert from Gaza, Palestine.">
+<meta name="author" content="Ashour Mundhar Abu Ghaben">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Ashour Ghaben — Full Stack Developer">
+<meta property="og:description" content="Laravel Developer & AI Tools Expert from Gaza, Palestine.">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Tabler Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --c1:#00F5A0;
+  --c2:#00D9F5;
+  --bg:#0A0A0F;
+  --bg2:#12121A;
+  --bg3:#1A1A26;
+  --text:#F0F0F0;
+  --muted:#8a8a98;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Space Grotesk','Cairo',sans-serif;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+
+.arabic{font-family:'Cairo','Space Grotesk',sans-serif;}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:100;
+  padding:1.1rem 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  background:rgba(10,10,15,.85);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.logo{
+  font-family:'Syne',sans-serif;
+  font-weight:800;
+  font-size:1.2rem;
+  background:linear-gradient(135deg,var(--c1),var(--c2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:.82rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  transition:color .25s;
+  cursor:pointer;
+}
+.nav-links a:hover{color:var(--c1);}
+.menu-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer;}
+
+section{padding:100px 2rem;max-width:1200px;margin:0 auto;}
+
+/* HERO */
+#hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:3rem;
+  position:relative;
+  overflow:hidden;
+  padding-top:120px;
+}
+.hero-blob{
+  position:absolute;
+  width:600px;height:600px;
+  right:-100px;top:50%;
+  transform:translateY(-50%);
+  background:radial-gradient(circle,rgba(0,245,160,.08) 0%,transparent 70%);
+  pointer-events:none;
+  z-index:0;
+}
+.hero-left{flex:1;max-width:620px;z-index:2;}
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.4rem 1rem;
+  border:1px solid rgba(0,245,160,.3);
+  border-radius:100px;
+  font-size:.78rem;
+  color:var(--c1);
+  margin-bottom:2rem;
+  letter-spacing:.05em;
+}
+.tag::before{
+  content:'';
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--c1);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+h1.hero-title{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(2.5rem,5vw,4.5rem);
+  font-weight:800;
+  line-height:1.05;
+  margin-bottom:1.5rem;
+}
+.grad{
+  background:linear-gradient(135deg,var(--c1),var(--c2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-sub{
+  color:var(--muted);
+  font-size:1rem;
+  line-height:1.85;
+  max-width:520px;
+  margin-bottom:2.5rem;
+}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap;}
+.btn-p{
+  padding:.9rem 2rem;
+  background:linear-gradient(135deg,var(--c1),var(--c2));
+  color:#000;
+  font-weight:600;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:.9rem;
+  font-family:'Space Grotesk',sans-serif;
+  transition:transform .2s,opacity .2s;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+}
+.btn-p:hover{transform:translateY(-2px);opacity:.9;}
+.btn-s{
+  padding:.9rem 2rem;
+  background:transparent;
+  color:var(--text);
+  font-weight:500;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:10px;
+  cursor:pointer;
+  font-size:.9rem;
+  font-family:'Space Grotesk',sans-serif;
+  transition:all .2s;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+}
+.btn-s:hover{border-color:var(--c1);color:var(--c1);}
+.hero-right{z-index:2;}
+.avatar-wrap{
+  width:300px;height:300px;
+  position:relative;
+  flex-shrink:0;
+}
+.avatar-ring{
+  position:absolute;
+  inset:-14px;
+  border-radius:50%;
+  border:2px solid transparent;
+  border-top-color:var(--c1);
+  border-right-color:var(--c2);
+  animation:spin 4s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+.avatar-inner{
+  width:100%;height:100%;
+  border-radius:50%;
+  background:linear-gradient(135deg,rgba(0,245,160,.1),rgba(0,217,245,.1));
+  border:1px solid rgba(255,255,255,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Syne',sans-serif;
+  font-size:5rem;
+  font-weight:800;
+  color:rgba(255,255,255,.2);
+}
+
+/* ABOUT */
+#about{background:transparent;}
+.section-wrapper{background:var(--bg2);padding:80px 2rem;}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3rem;
+  align-items:start;
+  max-width:1200px;
+  margin:0 auto;
+}
+.sec-label{
+  font-size:.74rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--c1);
+  margin-bottom:.8rem;
+}
+.sec-title{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(2rem,3.2vw,3rem);
+  font-weight:800;
+  line-height:1.2;
+  margin-bottom:1.4rem;
+}
+.about-text{
+  color:var(--muted);
+  line-height:1.95;
+  font-size:.95rem;
+  margin-bottom:1.8rem;
+}
+.edu-card{
+  background:var(--bg3);
+  border:1px solid rgba(0,245,160,.2);
+  border-radius:14px;
+  padding:1.8rem;
+}
+.edu-card h4{
+  color:var(--c1);
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:.6rem;
+}
+.edu-card p{
+  color:var(--text);
+  font-weight:500;
+  font-size:.95rem;
+  margin-bottom:.4rem;
+}
+.edu-card span{color:var(--muted);font-size:.85rem;}
+.stats-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.85rem;
+}
+.stat-card{
+  background:var(--bg3);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:12px;
+  padding:1.5rem;
+  text-align:center;
+  transition:transform .25s;
+}
+.stat-card:hover{transform:translateY(-3px);}
+.stat-num{
+  font-family:'Syne',sans-serif;
+  font-size:2.6rem;
+  font-weight:800;
+  background:linear-gradient(135deg,var(--c1),var(--c2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  line-height:1;
+}
+.stat-lbl{
+  color:var(--muted);
+  font-size:.78rem;
+  margin-top:.4rem;
+}
+
+/* SKILLS */
+.skills-block{
+  margin-top:3rem;
+  display:flex;
+  flex-direction:column;
+  gap:2.5rem;
+}
+.sg-label{
+  font-size:.74rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:1rem;
+}
+.pills{display:flex;flex-wrap:wrap;gap:.7rem;}
+.pill{
+  padding:.6rem 1.4rem;
+  border-radius:100px;
+  font-size:.85rem;
+  font-weight:500;
+  border:1px solid;
+  transition:all .25s;
+  cursor:default;
+}
+.pill.t{
+  border-color:rgba(0,245,160,.3);
+  color:var(--c1);
+  background:rgba(0,245,160,.05);
+}
+.pill.t:hover{background:rgba(0,245,160,.15);transform:translateY(-2px);}
+.pill.a{
+  border-color:rgba(0,217,245,.3);
+  color:var(--c2);
+  background:rgba(0,217,245,.05);
+}
+.pill.a:hover{background:rgba(0,217,245,.15);transform:translateY(-2px);}
+
+/* PROJECTS */
+.proj-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:1.4rem;
+  margin-top:3rem;
+}
+.pc{
+  background:var(--bg3);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;
+  padding:1.8rem;
+  transition:all .3s;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+.pc::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(0,245,160,.05),transparent);
+  opacity:0;
+  transition:opacity .3s;
+  pointer-events:none;
+}
+.pc:hover{transform:translateY(-4px);border-color:rgba(0,245,160,.3);}
+.pc:hover::before{opacity:1;}
+.pnum{
+  font-family:'Syne',sans-serif;
+  font-size:3rem;
+  font-weight:800;
+  color:rgba(255,255,255,.04);
+  position:absolute;
+  top:.8rem;
+  right:1.4rem;
+  line-height:1;
+}
+.pico{font-size:1.6rem;margin-bottom:1.2rem;display:block;}
+.pc h3{
+  font-family:'Syne',sans-serif;
+  font-size:1.15rem;
+  font-weight:700;
+  margin-bottom:.7rem;
+  color:var(--text);
+}
+.pc p{
+  color:var(--muted);
+  font-size:.85rem;
+  line-height:1.75;
+  margin-bottom:1.2rem;
+  flex-grow:1;
+}
+.ptags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem;}
+.ptag{
+  padding:.25rem .65rem;
+  background:rgba(255,255,255,.06);
+  border-radius:5px;
+  font-size:.72rem;
+  color:var(--muted);
+}
+.gh-link{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  color:var(--c1);
+  font-size:.82rem;
+  font-weight:500;
+  text-decoration:none;
+  padding:.55rem 1.1rem;
+  border:1px solid rgba(0,245,160,.25);
+  border-radius:8px;
+  transition:all .2s;
+  align-self:flex-start;
+}
+.gh-link:hover{background:rgba(0,245,160,.1);}
+
+/* CONTACT */
+#contact{text-align:center;}
+.contact-inner{max-width:760px;margin:0 auto;}
+.contact-inner p{
+  color:var(--muted);
+  margin:1.4rem 0 3rem;
+  font-size:.95rem;
+  line-height:1.85;
+}
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:.85rem;
+  margin-bottom:2.5rem;
+}
+.sc-btn{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.55rem;
+  padding:1.2rem .75rem;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:12px;
+  text-decoration:none;
+  color:var(--text);
+  font-size:.82rem;
+  transition:all .25s;
+  background:var(--bg2);
+}
+.sc-btn i{font-size:1.5rem;}
+.sc-btn:hover{
+  border-color:var(--c1);
+  color:var(--c1);
+  transform:translateY(-3px);
+  background:rgba(0,245,160,.05);
+}
+.email-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1rem;
+  padding:1.3rem 2rem;
+  background:var(--bg2);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:12px;
+  flex-wrap:wrap;
+}
+.email-row .email-text{
+  color:var(--muted);
+  font-size:.9rem;
+  font-family:monospace;
+}
+.cbtn{
+  padding:.5rem 1.2rem;
+  background:rgba(0,245,160,.1);
+  border:1px solid rgba(0,245,160,.3);
+  border-radius:7px;
+  color:var(--c1);
+  font-size:.8rem;
+  cursor:pointer;
+  font-family:'Space Grotesk',sans-serif;
+  transition:all .2s;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+}
+.cbtn:hover{background:rgba(0,245,160,.2);}
+
+footer{
+  text-align:center;
+  padding:2rem;
+  color:var(--muted);
+  font-size:.82rem;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+footer strong{color:var(--c1);}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:1.5rem;gap:1rem;border-bottom:1px solid rgba(255,255,255,.06);}
+  .nav-links.open{display:flex;}
+  .menu-toggle{display:block;}
+  #hero{flex-direction:column;text-align:center;gap:2rem;padding-top:100px;}
+  .hero-left{order:2;}
+  .hero-right{order:1;}
+  .hero-sub{margin-left:auto;margin-right:auto;}
+  .hero-btns{justify-content:center;}
+  .avatar-wrap{width:220px;height:220px;}
+  .avatar-inner{font-size:3.5rem;}
+  .about-grid{grid-template-columns:1fr;}
+  section{padding:80px 1.2rem;}
+  .section-wrapper{padding:60px 1.2rem;}
+}
+@media (max-width:500px){
+  nav{padding:1rem 1.2rem;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .proj-grid{grid-template-columns:1fr;}
+  .social-grid{grid-template-columns:1fr 1fr;}
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:4px;}
+::-webkit-scrollbar-thumb:hover{background:var(--c1);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Ashour.</div>
+  <div class="nav-links" id="navLinks">
+    <a onclick="scrollToSection('hero')">Home</a>
+    <a onclick="scrollToSection('about')">About</a>
+    <a onclick="scrollToSection('skills')">Skills</a>
+    <a onclick="scrollToSection('projects')">Projects</a>
+    <a onclick="scrollToSection('contact')">Contact</a>
+  </div>
+  <button class="menu-toggle" onclick="toggleMenu()"><i class="ti ti-menu-2"></i></button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-blob"></div>
+  <div class="hero-left">
+    <div class="tag">Open to work</div>
+    <h1 class="hero-title"><span class="arabic">عاشور منذر</span><br><span class="grad">Full Stack</span><br>Developer</h1>
+    <p class="hero-sub arabic">مطوّر ويب متكامل من غزة 🇵🇸 — متخصص في Laravel وأدوات الذكاء الاصطناعي. أبني حلولاً برمجية متكاملة من الفكرة حتى الإطلاق.</p>
+    <div class="hero-btns">
+      <a class="btn-p" onclick="scrollToSection('projects')"><i class="ti ti-code"></i>View Projects</a>
+      <a class="btn-s" href="https://github.com/Ashour2" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>GitHub</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="avatar-wrap">
+      <div class="avatar-ring"></div>
+      <div class="avatar-inner">MA</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="section-wrapper" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="sec-label">About me</div>
+      <h2 class="sec-title arabic">من أنا؟</h2>
+      <p class="about-text arabic">خريج هندسة أنظمة الحاسوب والبرمجيات من كلية الهندسة وتكنولوجيا المعلومات — جامعة الأزهر بغزة. أبني تطبيقات ويب كاملة بـ Laravel مع واجهات تفاعلية احترافية، ومتخصص في التعامل مع أدوات الذكاء الاصطناعي وهندسة البرومبت.</p>
+      <div class="edu-card">
+        <h4>Education</h4>
+        <p class="arabic">هندسة أنظمة الحاسوب والبرمجيات</p>
+        <span class="arabic">كلية الهندسة وتكنولوجيا المعلومات — جامعة الأزهر، غزة</span>
+      </div>
+    </div>
+    <div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-num">6+</div><div class="stat-lbl">Projects Built</div></div>
+        <div class="stat-card"><div class="stat-num">3+</div><div class="stat-lbl">Years Exp</div></div>
+        <div class="stat-card"><div class="stat-num">10+</div><div class="stat-lbl">Tech Skills</div></div>
+        <div class="stat-card"><div class="stat-num">∞</div><div class="stat-lbl">AI Tools</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-label">What I use</div>
+  <h2 class="sec-title arabic">المهارات</h2>
+  <div class="skills-block">
+    <div class="skill-group">
+      <div class="sg-label">Web Development</div>
+      <div class="pills">
+        <span class="pill t">Laravel</span>
+        <span class="pill t">PHP</span>
+        <span class="pill t">MySQL</span>
+        <span class="pill t">HTML5</span>
+        <span class="pill t">CSS3</span>
+        <span class="pill t">JavaScript</span>
+        <span class="pill t">Bootstrap</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-label">AI & Productivity</div>
+      <div class="pills">
+        <span class="pill a">Prompt Engineering</span>
+        <span class="pill a">Claude Engineer</span>
+        <span class="pill a">AI Tools Expert</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<div class="section-wrapper" id="projects">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="sec-label">My work</div>
+    <h2 class="sec-title arabic">المشاريع</h2>
+    <div class="proj-grid">
+
+      <div class="pc">
+        <div class="pnum">01</div>
+        <span class="pico">⛺</span>
+        <h3 class="arabic">خيمتي</h3>
+        <p class="arabic">نظام إدارة مخيمات النازحين في قطاع غزة — لوحات تحكم متعددة الأدوار، إدارة عائلات، تقارير قابلة للتنزيل، واجهة متجاوبة.</p>
+        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">Multi-role</span><span class="ptag">Reports</span><span class="ptag">MySQL</span></div>
+        <a class="gh-link" href="https://github.com/Ashour2/Khaimati" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      </div>
+
+      <div class="pc">
+        <div class="pnum">02</div>
+        <span class="pico">🛍️</span>
+        <h3>Kawkab Store</h3>
+        <p class="arabic">متجر إلكتروني لبيع المشغولات اليدوية — داشبورد CMS كامل، تصنيفات، فيديوهات، نموذج تواصل وطلبات.</p>
+        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">CMS</span><span class="ptag">E-commerce</span></div>
+        <a class="gh-link" href="https://github.com/Ashour2/Kawkab_Store" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      </div>
+
+      <div class="pc">
+        <div class="pnum">03</div>
+        <span class="pico">🏙️</span>
+        <h3>Nova_X</h3>
+        <p class="arabic">منصة عقارية متكاملة — بيع وتأجير شاليهات وشقق وكافيهات وصالات، داشبورد مع تقارير PDF، جولة ثلاثية الأبعاد، دعم متعدد الدول.</p>
+        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">3D Tour</span><span class="ptag">PDF Reports</span><span class="ptag">Multi-country</span></div>
+        <a class="gh-link" href="https://github.com/Ashour2/Nova_X" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      </div>
+
+      <div class="pc">
+        <div class="pnum">04</div>
+        <span class="pico">🛒</span>
+        <h3>eShope</h3>
+        <p class="arabic">متجر إلكتروني كامل — سلة مشتريات، كوبونات خصم، تصدير PDF وExcel، مفضلة، تقييمات، إشعارات مخزون، AR/EN.</p>
+        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">Coupons</span><span class="ptag">Excel Export</span><span class="ptag">Bilingual</span></div>
+        <a class="gh-link" href="https://github.com/Ashour2/eshop" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      </div>
+
+      <div class="pc">
+        <div class="pnum">05</div>
+        <span class="pico">📰</span>
+        <h3>News CMS</h3>
+        <p class="arabic">نظام إدارة محتوى إخباري — Roles & Permissions، متعدد المحررين، تصنيفات، تعليقات، سلايدر.</p>
+        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">Roles</span><span class="ptag">CMS</span><span class="ptag">Multi-editor</span></div>
+        <a class="gh-link" href="https://github.com/Ashour2/Truth" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      </div>
+
+      <div class="pc">
+        <div class="pnum">06</div>
+        <span class="pico">🏪</span>
+        <h3>Ashour Store</h3>
+        <p class="arabic">منصة إدارة متجر إلكتروني — داشبورد كامل، إدارة منتجات وطلبات، نظام أدوار، دعم AR/EN.</p>
+        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">Dashboard</span><span class="ptag">AR/EN</span></div>
+        <a class="gh-link" href="https://github.com/Ashour2/Ashour_Store" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="sec-label">Get in touch</div>
+    <h2 class="sec-title arabic">تواصل <span class="grad">معي</span></h2>
+    <p class="arabic">هل عندك مشروع بذهنك؟ أو تبحث عن مطوّر محترف؟ تواصل معي على أي من المنصات التالية.</p>
+
+    <div class="social-grid">
+      <a class="sc-btn" href="https://github.com/Ashour2" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>GitHub</a>
+      <a class="sc-btn" href="https://www.linkedin.com/in/eng-ashour-ghaben-a96900246" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
+      <a class="sc-btn" href="https://mostaql.com/u/ashour_ghaben" target="_blank" rel="noopener"><i class="ti ti-briefcase"></i>مستقل</a>
+      <a class="sc-btn" href="https://khamsat.com/user/ashourghaben" target="_blank" rel="noopener"><i class="ti ti-stars"></i>خمسات</a>
+      <a class="sc-btn" href="https://www.facebook.com/profile.php?id=100023129466009" target="_blank" rel="noopener"><i class="ti ti-brand-facebook"></i>Facebook</a>
+      <a class="sc-btn" href="https://www.instagram.com/ashour_ghaben/" target="_blank" rel="noopener"><i class="ti ti-brand-instagram"></i>Instagram</a>
+      <a class="sc-btn" href="https://t.me/+970597785198" target="_blank" rel="noopener"><i class="ti ti-brand-telegram"></i>Telegram</a>
+      <a class="sc-btn" href="https://wa.me/972597785198" target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+    </div>
+
+    <div class="email-row">
+      <i class="ti ti-mail" style="color:var(--c1);font-size:1.2rem;"></i>
+      <span class="email-text">ashourashour528@gmail.com</span>
+      <button class="cbtn" onclick="copyEmail(this)"><i class="ti ti-copy"></i>Copy</button>
+      <a class="cbtn" href="mailto:ashourashour528@gmail.com"><i class="ti ti-send"></i>Send</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed & Built by <strong>Ashour Mundhar Abu Ghaben</strong> — Full Stack Developer from Gaza 🇵🇸</p>
+</footer>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  document.getElementById('navLinks').classList.remove('open');
+}
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('open');
+}
+function copyEmail(btn){
+  navigator.clipboard.writeText('ashourashour528@gmail.com').then(()=>{
+    const original = btn.innerHTML;
+    btn.innerHTML = '<i class="ti ti-check"></i>Copied!';
+    setTimeout(()=>{btn.innerHTML = original;},2000);
+  });
+}
+</script>
+
+</body>
+</html>
