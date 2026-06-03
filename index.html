@@ -1,39 +1,38 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashour Ghaben — Full Stack Developer</title>
-<meta name="description" content="Ashour Mundhar Abu Ghaben — Full Stack Laravel Developer & AI Tools Expert from Gaza, Palestine.">
-<meta name="author" content="Ashour Mundhar Abu Ghaben">
+<title>عاشور منذر أبو غبن — مهندس برمجيات</title>
+<meta name="description" content="عاشور منذر أبو غبن — مطوّر ويب متكامل ومهندس برمجيات من غزة، فلسطين">
+<meta name="author" content="Ashour Monther Abu Ghaben">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Ashour Ghaben — Full Stack Developer">
-<meta property="og:description" content="Laravel Developer & AI Tools Expert from Gaza, Palestine.">
+<meta property="og:title" content="عاشور منذر أبو غبن — مهندس برمجيات">
+<meta property="og:description" content="مطوّر Laravel وخبير في أدوات الذكاء الاصطناعي من غزة، فلسطين">
 <meta property="og:type" content="website">
+<meta property="og:image" content="profile.jpg">
 
-<!-- Favicon -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 fill=%22%23C9A961%22>◆</text></svg>">
 
-<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-<!-- Tabler Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
 :root{
-  --c1:#00F5A0;
-  --c2:#00D9F5;
-  --bg:#0A0A0F;
-  --bg2:#12121A;
-  --bg3:#1A1A26;
-  --text:#F0F0F0;
-  --muted:#8a8a98;
+  --gold:#C9A961;
+  --gold-light:#E5C97A;
+  --gold-dark:#9C7F3F;
+  --bg:#0D0D0F;
+  --bg2:#15151A;
+  --bg3:#1C1C24;
+  --line:rgba(201,169,97,.15);
+  --text:#EDE6D3;
+  --muted:#8B8378;
 }
 
 html{scroll-behavior:smooth;}
@@ -41,661 +40,924 @@ html{scroll-behavior:smooth;}
 body{
   background:var(--bg);
   color:var(--text);
-  font-family:'Space Grotesk','Cairo',sans-serif;
+  font-family:'Tajawal',sans-serif;
+  direction:rtl;
+  text-align:right;
   overflow-x:hidden;
+  position:relative;
   line-height:1.6;
 }
 
-.arabic{font-family:'Cairo','Space Grotesk',sans-serif;}
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    radial-gradient(circle at 20% 30%,rgba(201,169,97,.04) 0%,transparent 50%),
+    radial-gradient(circle at 80% 70%,rgba(201,169,97,.03) 0%,transparent 50%);
+  pointer-events:none;
+  z-index:0;
+}
 
 /* NAV */
 nav{
   position:fixed;
   top:0;left:0;right:0;
   z-index:100;
-  padding:1.1rem 2rem;
+  padding:1.2rem 2rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
-  background:rgba(10,10,15,.85);
-  border-bottom:1px solid rgba(255,255,255,.06);
+  background:rgba(13,13,15,.92);
+  border-bottom:1px solid var(--line);
 }
-.logo{
-  font-family:'Syne',sans-serif;
-  font-weight:800;
-  font-size:1.2rem;
-  background:linear-gradient(135deg,var(--c1),var(--c2));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
+.brand{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  font-size:1.5rem;
+  letter-spacing:.05em;
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  gap:.6rem;
 }
-.nav-links{display:flex;gap:2rem;}
+.brand::before{
+  content:'◆';
+  font-size:.8rem;
+  color:var(--gold-dark);
+}
+.nav-links{display:flex;gap:2.2rem;}
 .nav-links a{
   color:var(--muted);
   text-decoration:none;
-  font-size:.82rem;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  transition:color .25s;
+  font-size:.88rem;
+  font-weight:500;
+  transition:color .3s;
   cursor:pointer;
+  position:relative;
 }
-.nav-links a:hover{color:var(--c1);}
-.menu-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer;}
+.nav-links a:hover{color:var(--gold);}
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  bottom:-6px;
+  right:0;
+  width:0;
+  height:1px;
+  background:var(--gold);
+  transition:width .3s;
+}
+.nav-links a:hover::after{width:100%;}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer;}
 
-section{padding:100px 2rem;max-width:1200px;margin:0 auto;}
+section{padding:100px 2rem;position:relative;z-index:1;max-width:1200px;margin:0 auto;}
 
-/* HERO */
+/* HERO with PHOTO */
 #hero{
   min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:3rem;
-  position:relative;
-  overflow:hidden;
+  gap:4rem;
   padding-top:120px;
+  position:relative;
 }
-.hero-blob{
-  position:absolute;
-  width:600px;height:600px;
-  right:-100px;top:50%;
-  transform:translateY(-50%);
-  background:radial-gradient(circle,rgba(0,245,160,.08) 0%,transparent 70%);
-  pointer-events:none;
-  z-index:0;
-}
-.hero-left{flex:1;max-width:620px;z-index:2;}
-.tag{
-  display:inline-flex;
+
+.hero-text{flex:1;max-width:600px;}
+.hero-photo{flex-shrink:0;position:relative;}
+
+.ornament{
+  display:flex;
   align-items:center;
-  gap:.5rem;
-  padding:.4rem 1rem;
-  border:1px solid rgba(0,245,160,.3);
-  border-radius:100px;
-  font-size:.78rem;
-  color:var(--c1);
+  gap:1rem;
   margin-bottom:2rem;
+  color:var(--gold);
+}
+.ornament .line{
+  width:60px;
+  height:1px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+}
+.ornament .diamond{font-size:.8rem;letter-spacing:.5em;}
+
+.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:.95rem;
+  letter-spacing:.4em;
+  color:var(--gold);
+  text-transform:uppercase;
+  margin-bottom:1.5rem;
+  font-weight:500;
+}
+
+h1.hero-name{
+  font-family:'Tajawal',sans-serif;
+  font-weight:900;
+  font-size:clamp(2.5rem,4.5vw,4rem);
+  line-height:1.1;
+  margin-bottom:1rem;
+  letter-spacing:-.02em;
+}
+.hero-name .gold-name{
+  color:var(--gold);
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  font-style:italic;
+  display:block;
+  font-size:.55em;
+  margin-top:.5rem;
   letter-spacing:.05em;
 }
-.tag::before{
-  content:'';
-  width:6px;height:6px;
-  border-radius:50%;
-  background:var(--c1);
-  animation:pulse 2s infinite;
+
+.hero-divider{
+  width:80px;
+  height:1px;
+  background:var(--gold);
+  margin:2rem 0;
+  position:relative;
 }
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
-h1.hero-title{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(2.5rem,5vw,4.5rem);
-  font-weight:800;
-  line-height:1.05;
-  margin-bottom:1.5rem;
+.hero-divider::before{
+  content:'◆';
+  position:absolute;
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+  color:var(--gold);
+  font-size:.6rem;
+  background:var(--bg);
+  padding:0 .5rem;
 }
-.grad{
-  background:linear-gradient(135deg,var(--c1),var(--c2));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-}
+
 .hero-sub{
   color:var(--muted);
-  font-size:1rem;
-  line-height:1.85;
-  max-width:520px;
+  font-size:1.05rem;
+  line-height:2;
+  max-width:550px;
   margin-bottom:2.5rem;
+  font-weight:300;
 }
-.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap;}
-.btn-p{
-  padding:.9rem 2rem;
-  background:linear-gradient(135deg,var(--c1),var(--c2));
-  color:#000;
-  font-weight:600;
-  border:none;
-  border-radius:10px;
-  cursor:pointer;
-  font-size:.9rem;
-  font-family:'Space Grotesk',sans-serif;
-  transition:transform .2s,opacity .2s;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  gap:.5rem;
-}
-.btn-p:hover{transform:translateY(-2px);opacity:.9;}
-.btn-s{
-  padding:.9rem 2rem;
+
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-gold{
+  padding:1rem 2.5rem;
   background:transparent;
-  color:var(--text);
+  color:var(--gold);
   font-weight:500;
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:10px;
+  border:1px solid var(--gold);
+  border-radius:2px;
   cursor:pointer;
   font-size:.9rem;
-  font-family:'Space Grotesk',sans-serif;
-  transition:all .2s;
+  font-family:'Tajawal',sans-serif;
+  transition:all .4s;
   text-decoration:none;
   display:inline-flex;
   align-items:center;
-  gap:.5rem;
-}
-.btn-s:hover{border-color:var(--c1);color:var(--c1);}
-.hero-right{z-index:2;}
-.avatar-wrap{
-  width:300px;height:300px;
-  position:relative;
-  flex-shrink:0;
-}
-.avatar-ring{
-  position:absolute;
-  inset:-14px;
-  border-radius:50%;
-  border:2px solid transparent;
-  border-top-color:var(--c1);
-  border-right-color:var(--c2);
-  animation:spin 4s linear infinite;
-}
-@keyframes spin{to{transform:rotate(360deg);}}
-.avatar-inner{
-  width:100%;height:100%;
-  border-radius:50%;
-  background:linear-gradient(135deg,rgba(0,245,160,.1),rgba(0,217,245,.1));
-  border:1px solid rgba(255,255,255,.08);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:'Syne',sans-serif;
-  font-size:5rem;
-  font-weight:800;
-  color:rgba(255,255,255,.2);
-}
-
-/* ABOUT */
-#about{background:transparent;}
-.section-wrapper{background:var(--bg2);padding:80px 2rem;}
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:3rem;
-  align-items:start;
-  max-width:1200px;
-  margin:0 auto;
-}
-.sec-label{
-  font-size:.74rem;
-  letter-spacing:.15em;
-  text-transform:uppercase;
-  color:var(--c1);
-  margin-bottom:.8rem;
-}
-.sec-title{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(2rem,3.2vw,3rem);
-  font-weight:800;
-  line-height:1.2;
-  margin-bottom:1.4rem;
-}
-.about-text{
-  color:var(--muted);
-  line-height:1.95;
-  font-size:.95rem;
-  margin-bottom:1.8rem;
-}
-.edu-card{
-  background:var(--bg3);
-  border:1px solid rgba(0,245,160,.2);
-  border-radius:14px;
-  padding:1.8rem;
-}
-.edu-card h4{
-  color:var(--c1);
-  font-size:.72rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  margin-bottom:.6rem;
-}
-.edu-card p{
-  color:var(--text);
-  font-weight:500;
-  font-size:.95rem;
-  margin-bottom:.4rem;
-}
-.edu-card span{color:var(--muted);font-size:.85rem;}
-.stats-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:.85rem;
-}
-.stat-card{
-  background:var(--bg3);
-  border:1px solid rgba(255,255,255,.06);
-  border-radius:12px;
-  padding:1.5rem;
-  text-align:center;
-  transition:transform .25s;
-}
-.stat-card:hover{transform:translateY(-3px);}
-.stat-num{
-  font-family:'Syne',sans-serif;
-  font-size:2.6rem;
-  font-weight:800;
-  background:linear-gradient(135deg,var(--c1),var(--c2));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  line-height:1;
-}
-.stat-lbl{
-  color:var(--muted);
-  font-size:.78rem;
-  margin-top:.4rem;
-}
-
-/* SKILLS */
-.skills-block{
-  margin-top:3rem;
-  display:flex;
-  flex-direction:column;
-  gap:2.5rem;
-}
-.sg-label{
-  font-size:.74rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:1rem;
-}
-.pills{display:flex;flex-wrap:wrap;gap:.7rem;}
-.pill{
-  padding:.6rem 1.4rem;
-  border-radius:100px;
-  font-size:.85rem;
-  font-weight:500;
-  border:1px solid;
-  transition:all .25s;
-  cursor:default;
-}
-.pill.t{
-  border-color:rgba(0,245,160,.3);
-  color:var(--c1);
-  background:rgba(0,245,160,.05);
-}
-.pill.t:hover{background:rgba(0,245,160,.15);transform:translateY(-2px);}
-.pill.a{
-  border-color:rgba(0,217,245,.3);
-  color:var(--c2);
-  background:rgba(0,217,245,.05);
-}
-.pill.a:hover{background:rgba(0,217,245,.15);transform:translateY(-2px);}
-
-/* PROJECTS */
-.proj-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
-  gap:1.4rem;
-  margin-top:3rem;
-}
-.pc{
-  background:var(--bg3);
-  border:1px solid rgba(255,255,255,.07);
-  border-radius:16px;
-  padding:1.8rem;
-  transition:all .3s;
+  gap:.6rem;
+  letter-spacing:.05em;
   position:relative;
   overflow:hidden;
-  display:flex;
-  flex-direction:column;
+  z-index:1;
 }
-.pc::before{
+.btn-gold::before{
   content:'';
   position:absolute;
   inset:0;
-  background:linear-gradient(135deg,rgba(0,245,160,.05),transparent);
-  opacity:0;
-  transition:opacity .3s;
+  background:var(--gold);
+  transform:translateX(100%);
+  transition:transform .4s;
+  z-index:-1;
+}
+.btn-gold:hover{color:var(--bg);}
+.btn-gold:hover::before{transform:translateX(0);}
+.btn-gold.filled{background:var(--gold);color:var(--bg);}
+.btn-gold.filled::before{background:transparent;}
+.btn-gold.filled:hover{background:transparent;color:var(--gold);}
+
+/* PHOTO STYLING - The luxury portrait */
+.photo-frame{
+  position:relative;
+  width:380px;
+  height:380px;
+}
+.photo-frame::before{
+  content:'';
+  position:absolute;
+  inset:-20px;
+  border:1px solid var(--gold);
+  border-radius:50%;
+  opacity:.4;
+  animation:slowRotate 30s linear infinite;
+}
+.photo-frame::after{
+  content:'';
+  position:absolute;
+  inset:-35px;
+  border:1px dashed var(--gold);
+  border-radius:50%;
+  opacity:.2;
+  animation:slowRotate 60s linear infinite reverse;
+}
+@keyframes slowRotate{
+  to{transform:rotate(360deg);}
+}
+
+.photo-circle{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  overflow:hidden;
+  position:relative;
+  border:3px solid var(--gold);
+  box-shadow:
+    0 0 0 1px rgba(201,169,97,.2),
+    0 20px 60px rgba(0,0,0,.6),
+    inset 0 0 0 2px var(--bg);
+}
+.photo-circle img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  filter:contrast(1.05) saturate(1.1);
+  transition:transform .8s ease;
+}
+.photo-circle:hover img{transform:scale(1.05);}
+
+/* Vignette overlay to blend the photo edges */
+.photo-circle::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:radial-gradient(circle,transparent 55%,rgba(13,13,15,.4) 95%);
   pointer-events:none;
 }
-.pc:hover{transform:translateY(-4px);border-color:rgba(0,245,160,.3);}
-.pc:hover::before{opacity:1;}
-.pnum{
-  font-family:'Syne',sans-serif;
-  font-size:3rem;
-  font-weight:800;
-  color:rgba(255,255,255,.04);
-  position:absolute;
-  top:.8rem;
-  right:1.4rem;
-  line-height:1;
-}
-.pico{font-size:1.6rem;margin-bottom:1.2rem;display:block;}
-.pc h3{
-  font-family:'Syne',sans-serif;
-  font-size:1.15rem;
-  font-weight:700;
-  margin-bottom:.7rem;
-  color:var(--text);
-}
-.pc p{
-  color:var(--muted);
-  font-size:.85rem;
-  line-height:1.75;
-  margin-bottom:1.2rem;
-  flex-grow:1;
-}
-.ptags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem;}
-.ptag{
-  padding:.25rem .65rem;
-  background:rgba(255,255,255,.06);
-  border-radius:5px;
-  font-size:.72rem;
-  color:var(--muted);
-}
-.gh-link{
-  display:inline-flex;
-  align-items:center;
-  gap:.5rem;
-  color:var(--c1);
-  font-size:.82rem;
-  font-weight:500;
-  text-decoration:none;
-  padding:.55rem 1.1rem;
-  border:1px solid rgba(0,245,160,.25);
-  border-radius:8px;
-  transition:all .2s;
-  align-self:flex-start;
-}
-.gh-link:hover{background:rgba(0,245,160,.1);}
 
-/* CONTACT */
-#contact{text-align:center;}
-.contact-inner{max-width:760px;margin:0 auto;}
-.contact-inner p{
-  color:var(--muted);
-  margin:1.4rem 0 3rem;
-  font-size:.95rem;
-  line-height:1.85;
+/* Floating gold ornaments around photo */
+.photo-deco{
+  position:absolute;
+  color:var(--gold);
+  font-size:.8rem;
+  letter-spacing:.3em;
+  pointer-events:none;
 }
-.social-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
-  gap:.85rem;
-  margin-bottom:2.5rem;
-}
-.sc-btn{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:.55rem;
-  padding:1.2rem .75rem;
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:12px;
-  text-decoration:none;
-  color:var(--text);
-  font-size:.82rem;
-  transition:all .25s;
-  background:var(--bg2);
-}
-.sc-btn i{font-size:1.5rem;}
-.sc-btn:hover{
-  border-color:var(--c1);
-  color:var(--c1);
-  transform:translateY(-3px);
-  background:rgba(0,245,160,.05);
-}
-.email-row{
+.photo-deco.top{top:-15px;left:50%;transform:translateX(-50%);background:var(--bg);padding:0 1rem;}
+.photo-deco.bottom{bottom:-15px;left:50%;transform:translateX(-50%);background:var(--bg);padding:0 1rem;}
+
+/* Photo badge - "Featured Developer" stamp */
+.photo-badge{
+  position:absolute;
+  bottom:10px;
+  right:-30px;
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:var(--bg);
+  border:1px solid var(--gold);
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:1rem;
-  padding:1.3rem 2rem;
+  flex-direction:column;
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  z-index:5;
+  animation:slowRotate 25s linear infinite;
+}
+.photo-badge::before{
+  content:'★';
+  color:var(--gold);
+  font-size:1rem;
+  margin-bottom:.2rem;
+}
+.photo-badge span{
+  display:block;
+  font-size:.55rem;
+  color:var(--gold);
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-weight:600;
+  line-height:1.3;
+}
+
+/* SECTION HEADER */
+.sec-header{
+  text-align:center;
+  margin-bottom:4rem;
+}
+.sec-tag{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--gold);
+  font-size:.85rem;
+  letter-spacing:.4em;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+  font-weight:500;
+}
+.sec-title{
+  font-family:'Tajawal',sans-serif;
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:900;
+  line-height:1.2;
+  margin-bottom:1rem;
+}
+.sec-divider{
+  width:60px;
+  height:1px;
+  background:var(--gold);
+  margin:1.5rem auto 0;
+  position:relative;
+}
+.sec-divider::before{
+  content:'◆';
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:var(--gold);
+  font-size:.6rem;
+  background:var(--bg);
+  padding:0 .5rem;
+}
+
+.section-wrapper{
   background:var(--bg2);
-  border:1px solid rgba(255,255,255,.07);
-  border-radius:12px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:100px 2rem;
+}
+.section-wrapper .sec-divider::before{background:var(--bg2);}
+.section-wrapper-inner{max-width:1200px;margin:0 auto;}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  align-items:center;
+}
+.about-card{
+  background:var(--bg3);
+  border:1px solid var(--line);
+  padding:3rem;
+  position:relative;
+}
+.about-card::before,.about-card::after{
+  content:'';
+  position:absolute;
+  width:30px;
+  height:30px;
+  border:1px solid var(--gold);
+}
+.about-card::before{top:-1px;right:-1px;border-bottom:none;border-left:none;}
+.about-card::after{bottom:-1px;left:-1px;border-top:none;border-right:none;}
+.about-quote{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;
+  font-style:italic;
+  color:var(--gold);
+  margin-bottom:1.5rem;
+  line-height:1.6;
+}
+.about-text{
+  color:var(--text);
+  line-height:2.1;
+  font-size:1rem;
+  font-weight:300;
+}
+.about-text strong{color:var(--gold);font-weight:500;}
+
+.stats-block{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.stat{
+  text-align:center;
+  padding:2rem 1rem;
+  border:1px solid var(--line);
+  background:var(--bg3);
+  transition:all .4s;
+}
+.stat:hover{border-color:var(--gold);transform:translateY(-3px);}
+.stat-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.5rem;
+  font-weight:700;
+  color:var(--gold);
+  line-height:1;
+  margin-bottom:.5rem;
+}
+.stat-lbl{
+  color:var(--muted);
+  font-size:.85rem;
+  letter-spacing:.05em;
+}
+
+/* SKILLS */
+.skills-cols{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+  max-width:1000px;
+  margin:0 auto;
+}
+.skill-col{
+  background:var(--bg2);
+  border:1px solid var(--line);
+  padding:2.5rem;
+}
+.skill-col h3{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--gold);
+  font-size:1.4rem;
+  margin-bottom:.5rem;
+  font-weight:600;
+}
+.skill-col .sub{
+  color:var(--muted);
+  font-size:.85rem;
+  margin-bottom:2rem;
+  letter-spacing:.05em;
+}
+.skill-list{list-style:none;}
+.skill-list li{
+  padding:1rem 0;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  font-size:.95rem;
+  transition:color .3s;
+}
+.skill-list li:last-child{border-bottom:none;}
+.skill-list li::before{
+  content:'◆';
+  color:var(--gold);
+  font-size:.6rem;
+}
+.skill-list li:hover{color:var(--gold);}
+
+/* PROJECTS */
+.proj-list{max-width:1000px;margin:0 auto;}
+.proj-item{
+  display:grid;
+  grid-template-columns:80px 1fr auto;
+  gap:2rem;
+  align-items:center;
+  padding:2.5rem 0;
+  border-bottom:1px solid var(--line);
+  transition:all .4s;
+}
+.proj-item:hover{padding-right:1rem;padding-left:1rem;background:rgba(201,169,97,.02);}
+.proj-num-big{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.5rem;
+  font-weight:600;
+  color:var(--gold);
+  line-height:1;
+  font-style:italic;
+}
+.proj-content h3{
+  font-family:'Tajawal',sans-serif;
+  font-size:1.4rem;
+  font-weight:700;
+  margin-bottom:.6rem;
+  color:var(--text);
+}
+.proj-content p{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:.92rem;
+  font-weight:300;
+  margin-bottom:1rem;
+}
+.proj-meta{
+  display:flex;
+  gap:1.5rem;
+  flex-wrap:wrap;
+  font-size:.78rem;
+  color:var(--gold);
+  letter-spacing:.05em;
+}
+.proj-meta span{position:relative;padding-left:1rem;}
+.proj-meta span:not(:first-child)::before{
+  content:'·';
+  position:absolute;
+  right:-1rem;
+  color:var(--muted);
+}
+.proj-link-arrow{
+  width:50px;
+  height:50px;
+  border:1px solid var(--gold);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--gold);
+  text-decoration:none;
+  font-size:1.2rem;
+  transition:all .4s;
+  flex-shrink:0;
+}
+.proj-link-arrow:hover{background:var(--gold);color:var(--bg);transform:rotate(-45deg);}
+
+/* CONTACT */
+#contact{text-align:center;}
+.contact-wrap{max-width:800px;margin:0 auto;}
+.contact-intro{
+  color:var(--muted);
+  font-size:1rem;
+  line-height:2;
+  margin:1.5rem 0 3rem;
+  font-weight:300;
+}
+.email-feature{
+  background:var(--bg2);
+  border:1px solid var(--gold);
+  padding:2.5rem;
+  margin-bottom:3rem;
+  position:relative;
+}
+.email-feature::before,.email-feature::after{
+  content:'';
+  position:absolute;
+  width:25px;
+  height:25px;
+  border:1px solid var(--gold);
+}
+.email-feature::before{top:-1px;right:-1px;border-bottom:none;border-left:none;}
+.email-feature::after{bottom:-1px;left:-1px;border-top:none;border-right:none;}
+.email-feature .label{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--gold);
+  font-size:.85rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+}
+.email-row-display{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.8rem;
+  margin-bottom:1.5rem;
   flex-wrap:wrap;
 }
-.email-row .email-text{
-  color:var(--muted);
-  font-size:.9rem;
-  font-family:monospace;
+.email-feature .email-addr{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;
+  color:var(--text);
+  direction:ltr;
 }
-.cbtn{
-  padding:.5rem 1.2rem;
-  background:rgba(0,245,160,.1);
-  border:1px solid rgba(0,245,160,.3);
-  border-radius:7px;
-  color:var(--c1);
-  font-size:.8rem;
-  cursor:pointer;
-  font-family:'Space Grotesk',sans-serif;
-  transition:all .2s;
-  text-decoration:none;
+.email-copy-icon{
+  width:42px;
+  height:42px;
+  border:1px solid var(--gold);
+  border-radius:50%;
   display:inline-flex;
   align-items:center;
-  gap:.4rem;
+  justify-content:center;
+  color:var(--gold);
+  background:transparent;
+  cursor:pointer;
+  font-size:1.1rem;
+  transition:all .3s;
 }
-.cbtn:hover{background:rgba(0,245,160,.2);}
+.email-copy-icon:hover{background:var(--gold);color:var(--bg);}
+.email-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.email-action{
+  padding:.7rem 1.5rem;
+  background:transparent;
+  border:1px solid var(--line);
+  color:var(--text);
+  font-size:.85rem;
+  cursor:pointer;
+  font-family:'Tajawal',sans-serif;
+  text-decoration:none;
+  transition:all .3s;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+}
+.email-action:hover{border-color:var(--gold);color:var(--gold);}
+
+.social-title{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--gold);
+  font-size:.85rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  margin-bottom:2rem;
+}
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+  gap:1rem;
+}
+.social-item{
+  padding:1.3rem .8rem;
+  border:1px solid var(--line);
+  background:var(--bg2);
+  text-decoration:none;
+  color:var(--text);
+  font-size:.85rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.6rem;
+  transition:all .4s;
+  position:relative;
+  overflow:hidden;
+}
+.social-item::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,transparent,rgba(201,169,97,.05));
+  opacity:0;
+  transition:opacity .3s;
+}
+.social-item:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px);}
+.social-item:hover::before{opacity:1;}
+.social-item i{font-size:1.4rem;}
 
 footer{
   text-align:center;
-  padding:2rem;
+  padding:2.5rem;
+  border-top:1px solid var(--line);
   color:var(--muted);
-  font-size:.82rem;
-  border-top:1px solid rgba(255,255,255,.05);
+  font-size:.85rem;
+  background:var(--bg2);
 }
-footer strong{color:var(--c1);}
+footer .gold{color:var(--gold);font-weight:500;}
+footer .crest{
+  font-size:1rem;
+  color:var(--gold);
+  margin-bottom:.8rem;
+  letter-spacing:.5em;
+}
 
 /* RESPONSIVE */
-@media (max-width:900px){
-  .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:1.5rem;gap:1rem;border-bottom:1px solid rgba(255,255,255,.06);}
-  .nav-links.open{display:flex;}
-  .menu-toggle{display:block;}
-  #hero{flex-direction:column;text-align:center;gap:2rem;padding-top:100px;}
-  .hero-left{order:2;}
-  .hero-right{order:1;}
+@media (max-width:1000px){
+  #hero{flex-direction:column-reverse;text-align:center;gap:3rem;}
+  .hero-text{text-align:center;}
+  .ornament{justify-content:center;}
+  .hero-divider{margin-left:auto;margin-right:auto;}
+  .hero-divider::before{right:50%;transform:translate(50%,-50%);}
   .hero-sub{margin-left:auto;margin-right:auto;}
   .hero-btns{justify-content:center;}
-  .avatar-wrap{width:220px;height:220px;}
-  .avatar-inner{font-size:3.5rem;}
-  .about-grid{grid-template-columns:1fr;}
-  section{padding:80px 1.2rem;}
-  .section-wrapper{padding:60px 1.2rem;}
-}
-@media (max-width:500px){
-  nav{padding:1rem 1.2rem;}
-  .stats-grid{grid-template-columns:1fr 1fr;}
-  .proj-grid{grid-template-columns:1fr;}
-  .social-grid{grid-template-columns:1fr 1fr;}
+  .photo-frame{width:280px;height:280px;}
+  .photo-badge{width:90px;height:90px;right:-15px;}
 }
 
-/* Scrollbar */
+@media (max-width:900px){
+  .nav-links{
+    display:none;
+    position:fixed;
+    top:64px;
+    left:0;
+    right:0;
+    background:var(--bg2);
+    flex-direction:column;
+    padding:1.5rem;
+    gap:1rem;
+    border-bottom:1px solid var(--line);
+  }
+  .nav-links.open{display:flex;}
+  .menu-toggle{display:block;}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .skills-cols{grid-template-columns:1fr;gap:1.5rem;}
+  .proj-item{grid-template-columns:60px 1fr;gap:1.2rem;}
+  .proj-link-arrow{grid-column:span 2;justify-self:start;}
+  .proj-num-big{font-size:2.5rem;}
+  section,.section-wrapper{padding:60px 1.5rem;}
+  .email-feature{padding:2rem 1.5rem;}
+  .email-feature .email-addr{font-size:1.2rem;}
+  .about-card{padding:2rem;}
+}
+
+@media (max-width:500px){
+  .photo-frame{width:230px;height:230px;}
+  .photo-badge{width:75px;height:75px;right:-10px;}
+  .photo-badge span{font-size:.5rem;}
+}
+
 ::-webkit-scrollbar{width:8px;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:4px;}
-::-webkit-scrollbar-thumb:hover{background:var(--c1);}
+::-webkit-scrollbar-thumb:hover{background:var(--gold);}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">Ashour.</div>
+  <div class="brand">Ashour Ghaben</div>
   <div class="nav-links" id="navLinks">
-    <a onclick="scrollToSection('hero')">Home</a>
-    <a onclick="scrollToSection('about')">About</a>
-    <a onclick="scrollToSection('skills')">Skills</a>
-    <a onclick="scrollToSection('projects')">Projects</a>
-    <a onclick="scrollToSection('contact')">Contact</a>
+    <a onclick="scrollToSection('hero')">الرئيسية</a>
+    <a onclick="scrollToSection('about')">عني</a>
+    <a onclick="scrollToSection('skills')">المهارات</a>
+    <a onclick="scrollToSection('projects')">الأعمال</a>
+    <a onclick="scrollToSection('contact')">التواصل</a>
   </div>
   <button class="menu-toggle" onclick="toggleMenu()"><i class="ti ti-menu-2"></i></button>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
-  <div class="hero-blob"></div>
-  <div class="hero-left">
-    <div class="tag">Open to work</div>
-    <h1 class="hero-title"><span class="arabic">عاشور منذر</span><br><span class="grad">Full Stack</span><br>Developer</h1>
-    <p class="hero-sub arabic">مطوّر ويب متكامل من غزة 🇵🇸 — متخصص في Laravel وأدوات الذكاء الاصطناعي. أبني حلولاً برمجية متكاملة من الفكرة حتى الإطلاق.</p>
+  <div class="hero-text">
+    <div class="ornament">
+      <span class="line"></span>
+      <span class="diamond">◆ ◆ ◆</span>
+    </div>
+    <div class="hero-title">Full Stack Developer</div>
+    <h1 class="hero-name">عاشور منذر أبو غبن<span class="gold-name">Ashour Monther Abu Ghaben</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">مهندس برمجيات وخبير في تطوير الأنظمة المتكاملة بإطار Laravel،<br>أصنع حلولاً رقمية بلمسة احترافية تجمع بين الدقة والجمال.</p>
     <div class="hero-btns">
-      <a class="btn-p" onclick="scrollToSection('projects')"><i class="ti ti-code"></i>View Projects</a>
-      <a class="btn-s" href="https://github.com/Ashour2" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>GitHub</a>
+      <a class="btn-gold filled" onclick="scrollToSection('projects')">معرض أعمالي</a>
+      <a class="btn-gold" onclick="scrollToSection('contact')">تواصل معي</a>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="avatar-wrap">
-      <div class="avatar-ring"></div>
-      <div class="avatar-inner">MA</div>
+  <div class="hero-photo">
+    <div class="photo-frame">
+      <span class="photo-deco top">◆ ◆ ◆</span>
+      <div class="photo-circle">
+        <img src="profile.jpg" alt="Ashour Monther Abu Ghaben">
+      </div>
+      <div class="photo-badge">
+        <span>Full Stack<br>Developer</span>
+      </div>
+      <span class="photo-deco bottom">◆ ◆ ◆</span>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <div class="section-wrapper" id="about">
-  <div class="about-grid">
-    <div>
-      <div class="sec-label">About me</div>
-      <h2 class="sec-title arabic">من أنا؟</h2>
-      <p class="about-text arabic">خريج هندسة أنظمة الحاسوب والبرمجيات من كلية الهندسة وتكنولوجيا المعلومات — جامعة الأزهر بغزة. أبني تطبيقات ويب كاملة بـ Laravel مع واجهات تفاعلية احترافية، ومتخصص في التعامل مع أدوات الذكاء الاصطناعي وهندسة البرومبت.</p>
-      <div class="edu-card">
-        <h4>Education</h4>
-        <p class="arabic">هندسة أنظمة الحاسوب والبرمجيات</p>
-        <span class="arabic">كلية الهندسة وتكنولوجيا المعلومات — جامعة الأزهر، غزة</span>
-      </div>
+  <div class="section-wrapper-inner">
+    <div class="sec-header">
+      <div class="sec-tag">About Me</div>
+      <h2 class="sec-title">نبذة عني</h2>
+      <div class="sec-divider"></div>
     </div>
-    <div>
-      <div class="stats-grid">
-        <div class="stat-card"><div class="stat-num">6+</div><div class="stat-lbl">Projects Built</div></div>
-        <div class="stat-card"><div class="stat-num">3+</div><div class="stat-lbl">Years Exp</div></div>
-        <div class="stat-card"><div class="stat-num">10+</div><div class="stat-lbl">Tech Skills</div></div>
-        <div class="stat-card"><div class="stat-num">∞</div><div class="stat-lbl">AI Tools</div></div>
+    <div class="about-grid">
+      <div class="about-card">
+        <p class="about-quote">"الكود الجيد ليس مجرد سطور... بل عمل فني متقن."</p>
+        <p class="about-text">
+          مهندس <strong>أنظمة الحاسوب والبرمجيات</strong>، خريج كلية الهندسة وتكنولوجيا المعلومات من جامعة الأزهر بغزة.
+          <br><br>
+          أتخصص في بناء تطبيقات الويب المتكاملة باستخدام <strong>Laravel</strong>، وأمتلك خبرة عميقة في التعامل مع <strong>أدوات الذكاء الاصطناعي</strong> وهندسة البرومبت، مما يمكّنني من تقديم حلول رقمية احترافية تواكب أحدث التقنيات.
+        </p>
+      </div>
+      <div class="stats-block">
+        <div class="stat"><div class="stat-num">6+</div><div class="stat-lbl">مشروع متكامل</div></div>
+        <div class="stat"><div class="stat-num">3+</div><div class="stat-lbl">سنوات خبرة</div></div>
+        <div class="stat"><div class="stat-num">10+</div><div class="stat-lbl">تقنية متقنة</div></div>
+        <div class="stat"><div class="stat-num">∞</div><div class="stat-lbl">أداة ذكاء اصطناعي</div></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SKILLS -->
 <section id="skills">
-  <div class="sec-label">What I use</div>
-  <h2 class="sec-title arabic">المهارات</h2>
-  <div class="skills-block">
-    <div class="skill-group">
-      <div class="sg-label">Web Development</div>
-      <div class="pills">
-        <span class="pill t">Laravel</span>
-        <span class="pill t">PHP</span>
-        <span class="pill t">MySQL</span>
-        <span class="pill t">HTML5</span>
-        <span class="pill t">CSS3</span>
-        <span class="pill t">JavaScript</span>
-        <span class="pill t">Bootstrap</span>
-      </div>
+  <div class="sec-header">
+    <div class="sec-tag">Expertise</div>
+    <h2 class="sec-title">مهاراتي</h2>
+    <div class="sec-divider"></div>
+  </div>
+  <div class="skills-cols">
+    <div class="skill-col">
+      <h3>تطوير الويب</h3>
+      <div class="sub">Web Development</div>
+      <ul class="skill-list">
+        <li>Laravel Framework</li>
+        <li>PHP</li>
+        <li>MySQL Database</li>
+        <li>HTML5 &amp; CSS3</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+      </ul>
     </div>
-    <div class="skill-group">
-      <div class="sg-label">AI & Productivity</div>
-      <div class="pills">
-        <span class="pill a">Prompt Engineering</span>
-        <span class="pill a">Claude Engineer</span>
-        <span class="pill a">AI Tools Expert</span>
-      </div>
+    <div class="skill-col">
+      <h3>الذكاء الاصطناعي</h3>
+      <div class="sub">AI &amp; Productivity</div>
+      <ul class="skill-list">
+        <li>Prompt Engineering</li>
+        <li>Claude Engineer</li>
+        <li>AI Tools Expert</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <div class="section-wrapper" id="projects">
-  <div style="max-width:1200px;margin:0 auto;">
-    <div class="sec-label">My work</div>
-    <h2 class="sec-title arabic">المشاريع</h2>
-    <div class="proj-grid">
+  <div class="section-wrapper-inner">
+    <div class="sec-header">
+      <div class="sec-tag">Portfolio</div>
+      <h2 class="sec-title">معرض الأعمال</h2>
+      <div class="sec-divider"></div>
+    </div>
+    <div class="proj-list">
 
-      <div class="pc">
-        <div class="pnum">01</div>
-        <span class="pico">⛺</span>
-        <h3 class="arabic">خيمتي</h3>
-        <p class="arabic">نظام إدارة مخيمات النازحين في قطاع غزة — لوحات تحكم متعددة الأدوار، إدارة عائلات، تقارير قابلة للتنزيل، واجهة متجاوبة.</p>
-        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">Multi-role</span><span class="ptag">Reports</span><span class="ptag">MySQL</span></div>
-        <a class="gh-link" href="https://github.com/Ashour2/Khaimati" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      <div class="proj-item">
+        <div class="proj-num-big">01</div>
+        <div class="proj-content">
+          <h3>خيمتي</h3>
+          <p>نظام إدارة مخيمات النازحين في قطاع غزة — لوحات تحكم متعددة الأدوار، إدارة عائلات، تقارير قابلة للتنزيل، واجهة متجاوبة.</p>
+          <div class="proj-meta"><span>Laravel</span><span>Multi-role</span><span>Reports</span></div>
+        </div>
+        <a class="proj-link-arrow" href="https://github.com/Ashour2/Khaimati" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
       </div>
 
-      <div class="pc">
-        <div class="pnum">02</div>
-        <span class="pico">🛍️</span>
-        <h3>Kawkab Store</h3>
-        <p class="arabic">متجر إلكتروني لبيع المشغولات اليدوية — داشبورد CMS كامل، تصنيفات، فيديوهات، نموذج تواصل وطلبات.</p>
-        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">CMS</span><span class="ptag">E-commerce</span></div>
-        <a class="gh-link" href="https://github.com/Ashour2/Kawkab_Store" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      <div class="proj-item">
+        <div class="proj-num-big">02</div>
+        <div class="proj-content">
+          <h3>Kawkab Store</h3>
+          <p>متجر إلكتروني لبيع المشغولات اليدوية — داشبورد CMS كامل، تصنيفات، فيديوهات، نموذج تواصل وطلبات.</p>
+          <div class="proj-meta"><span>Laravel</span><span>CMS</span><span>E-commerce</span></div>
+        </div>
+        <a class="proj-link-arrow" href="https://github.com/Ashour2/Kawkab_Store" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
       </div>
 
-      <div class="pc">
-        <div class="pnum">03</div>
-        <span class="pico">🏙️</span>
-        <h3>Nova_X</h3>
-        <p class="arabic">منصة عقارية متكاملة — بيع وتأجير شاليهات وشقق وكافيهات وصالات، داشبورد مع تقارير PDF، جولة ثلاثية الأبعاد، دعم متعدد الدول.</p>
-        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">3D Tour</span><span class="ptag">PDF Reports</span><span class="ptag">Multi-country</span></div>
-        <a class="gh-link" href="https://github.com/Ashour2/Nova_X" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      <div class="proj-item">
+        <div class="proj-num-big">03</div>
+        <div class="proj-content">
+          <h3>Nova_X</h3>
+          <p>منصة عقارية متكاملة — بيع وتأجير شاليهات وشقق وكافيهات وصالات، داشبورد مع تقارير PDF، جولة ثلاثية الأبعاد، دعم متعدد الدول.</p>
+          <div class="proj-meta"><span>Laravel</span><span>3D Tour</span><span>PDF Reports</span></div>
+        </div>
+        <a class="proj-link-arrow" href="https://github.com/Ashour2/Nova_X" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
       </div>
 
-      <div class="pc">
-        <div class="pnum">04</div>
-        <span class="pico">🛒</span>
-        <h3>eShope</h3>
-        <p class="arabic">متجر إلكتروني كامل — سلة مشتريات، كوبونات خصم، تصدير PDF وExcel، مفضلة، تقييمات، إشعارات مخزون، AR/EN.</p>
-        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">Coupons</span><span class="ptag">Excel Export</span><span class="ptag">Bilingual</span></div>
-        <a class="gh-link" href="https://github.com/Ashour2/eshop" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      <div class="proj-item">
+        <div class="proj-num-big">04</div>
+        <div class="proj-content">
+          <h3>eShope</h3>
+          <p>متجر إلكتروني كامل — سلة مشتريات، كوبونات خصم، تصدير PDF وExcel، مفضلة، تقييمات، إشعارات مخزون، AR/EN.</p>
+          <div class="proj-meta"><span>Laravel</span><span>Coupons</span><span>Bilingual</span></div>
+        </div>
+        <a class="proj-link-arrow" href="https://github.com/Ashour2/eshop" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
       </div>
 
-      <div class="pc">
-        <div class="pnum">05</div>
-        <span class="pico">📰</span>
-        <h3>News CMS</h3>
-        <p class="arabic">نظام إدارة محتوى إخباري — Roles & Permissions، متعدد المحررين، تصنيفات، تعليقات، سلايدر.</p>
-        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">Roles</span><span class="ptag">CMS</span><span class="ptag">Multi-editor</span></div>
-        <a class="gh-link" href="https://github.com/Ashour2/Truth" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      <div class="proj-item">
+        <div class="proj-num-big">05</div>
+        <div class="proj-content">
+          <h3>News CMS</h3>
+          <p>نظام إدارة محتوى إخباري متكامل — صلاحيات وأدوار، متعدد المحررين، تصنيفات، تعليقات، سلايدر متحرك.</p>
+          <div class="proj-meta"><span>Laravel</span><span>Roles &amp; Permissions</span><span>CMS</span></div>
+        </div>
+        <a class="proj-link-arrow" href="https://github.com/Ashour2/Truth" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
       </div>
 
-      <div class="pc">
-        <div class="pnum">06</div>
-        <span class="pico">🏪</span>
-        <h3>Ashour Store</h3>
-        <p class="arabic">منصة إدارة متجر إلكتروني — داشبورد كامل، إدارة منتجات وطلبات، نظام أدوار، دعم AR/EN.</p>
-        <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">Dashboard</span><span class="ptag">AR/EN</span></div>
-        <a class="gh-link" href="https://github.com/Ashour2/Ashour_Store" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View on GitHub</a>
+      <div class="proj-item">
+        <div class="proj-num-big">06</div>
+        <div class="proj-content">
+          <h3>Ashour Store</h3>
+          <p>منصة إدارة متجر إلكتروني — داشبورد كامل، إدارة منتجات وطلبات، نظام أدوار، دعم AR/EN.</p>
+          <div class="proj-meta"><span>Laravel</span><span>Dashboard</span><span>AR/EN</span></div>
+        </div>
+        <a class="proj-link-arrow" href="https://github.com/Ashour2/Ashour_Store" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
       </div>
 
     </div>
   </div>
 </div>
 
-<!-- CONTACT -->
 <section id="contact">
-  <div class="contact-inner">
-    <div class="sec-label">Get in touch</div>
-    <h2 class="sec-title arabic">تواصل <span class="grad">معي</span></h2>
-    <p class="arabic">هل عندك مشروع بذهنك؟ أو تبحث عن مطوّر محترف؟ تواصل معي على أي من المنصات التالية.</p>
+  <div class="sec-header">
+    <div class="sec-tag">Get in Touch</div>
+    <h2 class="sec-title">تواصل معي</h2>
+    <div class="sec-divider"></div>
+  </div>
+  <div class="contact-wrap">
+    <p class="contact-intro">هل لديك مشروع تودّ تنفيذه؟ أو تبحث عن مطوّر محترف لإنجاز أعمالك؟<br>يسعدني التواصل معك عبر أي من المنصات التالية.</p>
 
-    <div class="social-grid">
-      <a class="sc-btn" href="https://github.com/Ashour2" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>GitHub</a>
-      <a class="sc-btn" href="https://www.linkedin.com/in/eng-ashour-ghaben-a96900246" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
-      <a class="sc-btn" href="https://mostaql.com/u/ashour_ghaben" target="_blank" rel="noopener"><i class="ti ti-briefcase"></i>مستقل</a>
-      <a class="sc-btn" href="https://khamsat.com/user/ashourghaben" target="_blank" rel="noopener"><i class="ti ti-stars"></i>خمسات</a>
-      <a class="sc-btn" href="https://www.facebook.com/profile.php?id=100023129466009" target="_blank" rel="noopener"><i class="ti ti-brand-facebook"></i>Facebook</a>
-      <a class="sc-btn" href="https://www.instagram.com/ashour_ghaben/" target="_blank" rel="noopener"><i class="ti ti-brand-instagram"></i>Instagram</a>
-      <a class="sc-btn" href="https://t.me/+970597785198" target="_blank" rel="noopener"><i class="ti ti-brand-telegram"></i>Telegram</a>
-      <a class="sc-btn" href="https://wa.me/972597785198" target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+    <div class="email-feature">
+      <div class="label">البريد الإلكتروني</div>
+      <div class="email-row-display">
+        <span class="email-addr">ashourashour528@gmail.com</span>
+        <button class="email-copy-icon" onclick="copyEmail(this)" title="نسخ البريد"><i class="ti ti-copy"></i></button>
+      </div>
+      <div class="email-actions">
+        <a class="email-action" href="mailto:ashourashour528@gmail.com"><i class="ti ti-send"></i> إرسال بريد</a>
+      </div>
     </div>
 
-    <div class="email-row">
-      <i class="ti ti-mail" style="color:var(--c1);font-size:1.2rem;"></i>
-      <span class="email-text">ashourashour528@gmail.com</span>
-      <button class="cbtn" onclick="copyEmail(this)"><i class="ti ti-copy"></i>Copy</button>
-      <a class="cbtn" href="mailto:ashourashour528@gmail.com"><i class="ti ti-send"></i>Send</a>
+    <div class="social-title">منصات التواصل</div>
+    <div class="social-grid">
+      <a class="social-item" href="https://github.com/Ashour2" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>GitHub</a>
+      <a class="social-item" href="https://www.linkedin.com/in/eng-ashour-ghaben-a96900246" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
+      <a class="social-item" href="https://mostaql.com/u/ashour_ghaben" target="_blank" rel="noopener"><i class="ti ti-briefcase"></i>مستقل</a>
+      <a class="social-item" href="https://khamsat.com/user/ashourghaben" target="_blank" rel="noopener"><i class="ti ti-stars"></i>خمسات</a>
+      <a class="social-item" href="https://www.facebook.com/profile.php?id=100023129466009" target="_blank" rel="noopener"><i class="ti ti-brand-facebook"></i>Facebook</a>
+      <a class="social-item" href="https://www.instagram.com/ashour_ghaben/" target="_blank" rel="noopener"><i class="ti ti-brand-instagram"></i>Instagram</a>
+      <a class="social-item" href="https://t.me/+970597785198" target="_blank" rel="noopener"><i class="ti ti-brand-telegram"></i>Telegram</a>
+      <a class="social-item" href="https://wa.me/972597785198" target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>Designed & Built by <strong>Ashour Mundhar Abu Ghaben</strong> — Full Stack Developer from Gaza 🇵🇸</p>
+  <div class="crest">◆ ◆ ◆</div>
+  <p>صُمّم وطُوّر بعناية بواسطة <span class="gold">عاشور منذر أبو غبن</span></p>
+  <p style="margin-top:.5rem;font-size:.78rem;">مهندس برمجيات من غزة 🇵🇸 · جميع الحقوق محفوظة © 2026</p>
 </footer>
 
 <script>
@@ -709,7 +971,7 @@ function toggleMenu(){
 function copyEmail(btn){
   navigator.clipboard.writeText('ashourashour528@gmail.com').then(()=>{
     const original = btn.innerHTML;
-    btn.innerHTML = '<i class="ti ti-check"></i>Copied!';
+    btn.innerHTML = '<i class="ti ti-check"></i>';
     setTimeout(()=>{btn.innerHTML = original;},2000);
   });
 }
