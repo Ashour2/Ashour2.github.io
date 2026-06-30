@@ -745,6 +745,24 @@ footer .crest{
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:4px;}
 ::-webkit-scrollbar-thumb:hover{background:var(--gold);}
+
+/* ===== PROJECT BUTTONS + GALLERY MODAL ===== */
+.proj-actions{display:flex;gap:.7rem;margin-top:1rem;flex-wrap:wrap;}
+.proj-btn{padding:.55rem 1.2rem;background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:3px;cursor:pointer;font-size:.82rem;font-family:'Tajawal',sans-serif;font-weight:500;transition:all .35s;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;letter-spacing:.03em;}
+.proj-btn:hover{background:var(--gold);color:var(--bg);}
+.proj-btn i{font-size:1rem;}
+.gallery-modal{position:fixed;inset:0;background:rgba(13,13,15,.92);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:9999;padding:2rem;}
+.gallery-modal.active{display:flex;}
+.gallery-box{background:var(--bg2);border:1px solid var(--line);border-radius:8px;max-width:900px;width:100%;max-height:88vh;overflow-y:auto;padding:2rem;position:relative;}
+.gallery-box h3{color:var(--gold);margin-bottom:1.5rem;font-size:1.3rem;text-align:right;}
+.gallery-close{position:absolute;top:1rem;left:1rem;width:42px;height:42px;border:1px solid var(--gold);background:transparent;color:var(--gold);border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all .3s;}
+.gallery-close:hover{background:var(--gold);color:var(--bg);}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem;}
+.gallery-grid img{width:100%;height:140px;object-fit:cover;border-radius:5px;border:1px solid var(--line);cursor:pointer;transition:transform .3s,border-color .3s;}
+.gallery-grid img:hover{transform:scale(1.03);border-color:var(--gold);}
+.gallery-empty{color:var(--muted);text-align:center;padding:2rem 0;}
+@media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+
 </style>
 </head>
 <body>
@@ -863,7 +881,10 @@ footer .crest{
           <p>نظام إدارة مخيمات النازحين في قطاع غزة — لوحات تحكم متعددة الأدوار، إدارة عائلات، تقارير قابلة للتنزيل، واجهة متجاوبة.</p>
           <div class="proj-meta"><span>Laravel</span><span>Multi-role</span><span>Reports</span></div>
         </div>
-        <a class="proj-link-arrow" href="https://github.com/Ashour2/Khaimati" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
+        <div class="proj-actions">
+            <a class="proj-btn" href="https://github.com/Ashour2/Khaimati" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> كود GitHub</a>
+            <button class="proj-btn" type="button" onclick="openGallery('khaimati')"><i class="ti ti-photo"></i> معرض الصور</button>
+          </div>
       </div>
 
       <div class="proj-item">
@@ -873,7 +894,10 @@ footer .crest{
           <p>متجر إلكتروني لبيع المشغولات اليدوية — داشبورد CMS كامل، تصنيفات، فيديوهات، نموذج تواصل وطلبات.</p>
           <div class="proj-meta"><span>Laravel</span><span>CMS</span><span>E-commerce</span></div>
         </div>
-        <a class="proj-link-arrow" href="https://github.com/Ashour2/Kawkab_Store" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
+        <div class="proj-actions">
+            <a class="proj-btn" href="https://github.com/Ashour2/Kawkab_Store" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> كود GitHub</a>
+            <button class="proj-btn" type="button" onclick="openGallery('kawkab')"><i class="ti ti-photo"></i> معرض الصور</button>
+          </div>
       </div>
 
       <div class="proj-item">
@@ -883,7 +907,10 @@ footer .crest{
           <p>منصة عقارية متكاملة — بيع وتأجير شاليهات وشقق وكافيهات وصالات، داشبورد مع تقارير PDF، جولة ثلاثية الأبعاد، دعم متعدد الدول.</p>
           <div class="proj-meta"><span>Laravel</span><span>3D Tour</span><span>PDF Reports</span></div>
         </div>
-        <a class="proj-link-arrow" href="https://github.com/Ashour2/Nova_X" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
+        <div class="proj-actions">
+            <a class="proj-btn" href="https://github.com/Ashour2/Nova_X" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> كود GitHub</a>
+            <button class="proj-btn" type="button" onclick="openGallery('novax')"><i class="ti ti-photo"></i> معرض الصور</button>
+          </div>
       </div>
 
       <div class="proj-item">
@@ -893,7 +920,10 @@ footer .crest{
           <p>متجر إلكتروني كامل — سلة مشتريات، كوبونات خصم، تصدير PDF وExcel، مفضلة، تقييمات، إشعارات مخزون، AR/EN.</p>
           <div class="proj-meta"><span>Laravel</span><span>Coupons</span><span>Bilingual</span></div>
         </div>
-        <a class="proj-link-arrow" href="https://github.com/Ashour2/eshop" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
+        <div class="proj-actions">
+            <a class="proj-btn" href="https://github.com/Ashour2/eshop" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> كود GitHub</a>
+            <button class="proj-btn" type="button" onclick="openGallery('eshop')"><i class="ti ti-photo"></i> معرض الصور</button>
+          </div>
       </div>
 
       <div class="proj-item">
@@ -903,7 +933,10 @@ footer .crest{
           <p>نظام إدارة محتوى إخباري متكامل — صلاحيات وأدوار، متعدد المحررين، تصنيفات، تعليقات، سلايدر متحرك.</p>
           <div class="proj-meta"><span>Laravel</span><span>Roles &amp; Permissions</span><span>CMS</span></div>
         </div>
-        <a class="proj-link-arrow" href="https://github.com/Ashour2/Truth" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
+        <div class="proj-actions">
+            <a class="proj-btn" href="https://github.com/Ashour2/Truth" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> كود GitHub</a>
+            <button class="proj-btn" type="button" onclick="openGallery('news')"><i class="ti ti-photo"></i> معرض الصور</button>
+          </div>
       </div>
 
       <div class="proj-item">
@@ -913,7 +946,10 @@ footer .crest{
           <p>منصة إدارة متجر إلكتروني — داشبورد كامل، إدارة منتجات وطلبات، نظام أدوار، دعم AR/EN.</p>
           <div class="proj-meta"><span>Laravel</span><span>Dashboard</span><span>AR/EN</span></div>
         </div>
-        <a class="proj-link-arrow" href="https://github.com/Ashour2/Ashour_Store" target="_blank" rel="noopener" title="عرض المشروع على GitHub">←</a>
+        <div class="proj-actions">
+            <a class="proj-btn" href="https://github.com/Ashour2/Ashour_Store" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> كود GitHub</a>
+            <button class="proj-btn" type="button" onclick="openGallery('ashour-store')"><i class="ti ti-photo"></i> معرض الصور</button>
+          </div>
       </div>
 
     </div>
@@ -975,7 +1011,42 @@ function copyEmail(btn){
     setTimeout(()=>{btn.innerHTML = original;},2000);
   });
 }
+
+// ===== GALLERY MODAL =====
+const galleries = {
+  'khaimati':     { title:'Khaimati',     imgs:['1.jpg','2.jpg','3.jpg'] },
+  'kawkab':       { title:'Kawkab Store',  imgs:['1.jpg','2.jpg','3.jpg'] },
+  'novax':        { title:'Nova_X',        imgs:['1.jpg','2.jpg','3.jpg'] },
+  'eshop':        { title:'eShope',        imgs:['1.jpg','2.jpg','3.jpg'] },
+  'news':         { title:'News CMS',      imgs:['1.jpg','2.jpg','3.jpg'] },
+  'ashour-store': { title:'Ashour Store',  imgs:['1.jpg','2.jpg','3.jpg'] }
+};
+function openGallery(key){
+  const data = galleries[key]; if(!data) return;
+  document.getElementById('galleryTitle').textContent = data.title;
+  const grid = document.getElementById('galleryGrid');
+  if(!data.imgs || !data.imgs.length){ grid.innerHTML = '<p class="gallery-empty">لا توجد صور بعد.</p>'; }
+  else { grid.innerHTML = data.imgs.map(function(name){ return '<img src="images/'+key+'/'+name+'" alt="'+data.title+'" loading="lazy" onclick="window.open(this.src,\'_blank\')">'; }).join(''); }
+  document.getElementById('galleryModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeGallery(){
+  document.getElementById('galleryModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeGallery(); });
+
 </script>
+
+
+<!-- Gallery Modal -->
+<div class="gallery-modal" id="galleryModal" onclick="if(event.target===this)closeGallery()">
+  <div class="gallery-box">
+    <button class="gallery-close" type="button" onclick="closeGallery()"><i class="ti ti-x"></i></button>
+    <h3 id="galleryTitle"></h3>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</div>
 
 </body>
 </html>
