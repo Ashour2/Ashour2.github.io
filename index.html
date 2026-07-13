@@ -23,11 +23,11 @@
   "@type": "Person",
   "name": "Ashour Monther Abu Ghaben",
   "alternateName": "عاشور منذر أبو غبن",
-  "jobTitle": "Full Stack Developer",
+  "jobTitle": ["Full Stack Developer", "Certified Programming & AI Trainer"],
   "url": "https://ashour2.github.io/",
   "image": "https://ashour2.github.io/profile.jpg",
   "email": "mailto:ashourashour528@gmail.com",
-  "knowsAbout": ["Laravel", "PHP", "MySQL", "JavaScript", "POS Systems", "ERP", "Accounting Systems", "Prompt Engineering"],
+  "knowsAbout": ["Laravel", "PHP", "MySQL", "JavaScript", "POS Systems", "ERP", "Accounting Systems", "Prompt Engineering", "Large Language Models", "AI Training"],
   "sameAs": [
     "https://github.com/Ashour2",
     "https://www.linkedin.com/in/eng-ashour-ghaben-a96900246",
@@ -847,10 +847,12 @@ footer .crest{
           مهندس <strong>أنظمة الحاسوب والبرمجيات</strong>، خريج كلية الهندسة وتكنولوجيا المعلومات من جامعة الأزهر بغزة.
           <br><br>
           أتخصص في بناء تطبيقات الويب المتكاملة باستخدام <strong>Laravel</strong>، وأمتلك خبرة عميقة في التعامل مع <strong>أدوات الذكاء الاصطناعي</strong> وهندسة البرومبت، مما يمكّنني من تقديم حلول رقمية احترافية تواكب أحدث التقنيات.
+          <br><br>
+          كما أعمل <strong>مدرّب برمجة وذكاء اصطناعي معتمد</strong>، وأُعِدّ دورات تدريبية عربية في هندسة الأوامر (Prompt Engineering) ونماذج الذكاء الاصطناعي.
         </p>
       </div>
       <div class="stats-block">
-        <div class="stat"><div class="stat-num">9+</div><div class="stat-lbl">مشروع متكامل</div></div>
+        <div class="stat"><div class="stat-num">11+</div><div class="stat-lbl">مشروع متكامل</div></div>
         <div class="stat"><div class="stat-num">5+</div><div class="stat-lbl">سنوات خبرة</div></div>
         <div class="stat"><div class="stat-num">10+</div><div class="stat-lbl">تقنية متقنة</div></div>
         <div class="stat"><div class="stat-num">∞</div><div class="stat-lbl">أداة ذكاء اصطناعي</div></div>
@@ -884,6 +886,8 @@ footer .crest{
       <div class="sub">AI &amp; Productivity</div>
       <ul class="skill-list">
         <li>Prompt Engineering</li>
+        <li>مدرّب برمجة وذكاء اصطناعي معتمد</li>
+        <li>إعداد دورات وحقائب تدريبية</li>
         <li>Claude Engineer</li>
         <li>AI Tools Expert</li><li>الربح من الذكاء الاصطناعي</li><li>أتمتة الأعمال بالذكاء الاصطناعي</li><li>ChatGPT &amp; Midjourney</li>
       </ul>
@@ -1014,6 +1018,30 @@ footer .crest{
           </div>
       </div>
 
+      <div class="proj-item">
+        <div class="proj-num-big">10</div>
+        <div class="proj-content">
+          <h3>دورة هندسة الأوامر — Prompt Engineering</h3>
+          <p>دورة تدريبية احترافية من إعدادي في هندسة الأوامر (Prompt Engineering) — نماذج اللغات الكبيرة LLMs، عناصر البرومبت الاحترافي (RCTCIO)، تقنيات (Zero/Few-Shot, Chain-of-Thought, Self-Consistency)، منح الأدوار، وأفضل الممارسات — مادة عربية كاملة بتصميم أكاديمي.</p>
+          <div class="proj-meta"><span>Prompt Engineering</span><span>LLMs</span><span>تدريب معتمد</span></div>
+        </div>
+        <div class="proj-actions">
+            <button class="proj-btn" type="button" onclick="openGallery('prompt-eng')"><i class="ti ti-photo"></i> معرض الصور</button>
+          </div>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-num-big">11</div>
+        <div class="proj-content">
+          <h3>دورة كلود (Claude) والتطوير بمساعدة الذكاء الاصطناعي</h3>
+          <p>دورة تعريفية أكاديمية عن نموذج Claude من Anthropic (النشأة، القدرات، الأدوات، المهارات) + تطبيق عملي لتوظيف أدوات الذكاء الاصطناعي مثل Claude Code في تطوير أنظمة Laravel حقيقية.</p>
+          <div class="proj-meta"><span>Claude / Anthropic</span><span>AI-Assisted Dev</span><span>تدريب</span></div>
+        </div>
+        <div class="proj-actions">
+            <button class="proj-btn" type="button" onclick="openGallery('ai-training')"><i class="ti ti-photo"></i> معرض الصور</button>
+          </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -1085,7 +1113,9 @@ const galleries = {
   'novax':        { title:'Nova_X', imgs:['novax-homepage.png','novax-categories.png','novax-featured-properties.png','novax-property-details-reviews.png','novax-dashboard-stats.png','novax-dashboard-properties-table.png','novax-admin-properties-list.png','novax-orders-management.png','novax-amenities-management.png','novax-countries-management.png','novax-notifications.png','novax-reports.png','novax-create-account.png','novax-add-property-images-upload.png'] },
   'eshop':        { title:'eShope', imgs:seq('eshop',19) },
   'news':         { title:'News CMS', imgs:seq('news',12) },
-  'ashour-store': { title:'Ashour Store', imgs:['ashour-store-showcase.png'].concat(seq('ashour-store',5)) }
+  'ashour-store': { title:'Ashour Store', imgs:['ashour-store-showcase.png'].concat(seq('ashour-store',5)) },
+  'prompt-eng':   { title:'دورة هندسة الأوامر — Prompt Engineering', imgs:seq('prompt-eng',14) },
+  'ai-training':  { title:'دورة كلود (Claude) والتطوير بمساعدة الذكاء الاصطناعي', imgs:['ai-training-01-claude-course.png','ai-training-02.png','ai-training-03.png'] }
 };
 function openGallery(key){
   const data = galleries[key]; if(!data) return;
