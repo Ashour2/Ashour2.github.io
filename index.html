@@ -848,11 +848,11 @@ footer .crest{
           <br><br>
           أتخصص في بناء تطبيقات الويب المتكاملة باستخدام <strong>Laravel</strong>، وأمتلك خبرة عميقة في التعامل مع <strong>أدوات الذكاء الاصطناعي</strong> وهندسة البرومبت، مما يمكّنني من تقديم حلول رقمية احترافية تواكب أحدث التقنيات.
           <br><br>
-          كما أعمل <strong>مدرّب برمجة وذكاء اصطناعي معتمد</strong>، وأُعِدّ دورات تدريبية عربية في هندسة الأوامر (Prompt Engineering) ونماذج الذكاء الاصطناعي.
+          كما أعمل <strong>مدرّب برمجة وذكاء اصطناعي معتمد</strong>، وأُعِدّ دورات تدريبية في هندسة الأوامر (Prompt Engineering) ونماذج الذكاء الاصطناعي.
         </p>
       </div>
       <div class="stats-block">
-        <div class="stat"><div class="stat-num">11+</div><div class="stat-lbl">مشروع متكامل</div></div>
+        <div class="stat"><div class="stat-num">12+</div><div class="stat-lbl">مشروع متكامل</div></div>
         <div class="stat"><div class="stat-num">5+</div><div class="stat-lbl">سنوات خبرة</div></div>
         <div class="stat"><div class="stat-num">10+</div><div class="stat-lbl">تقنية متقنة</div></div>
         <div class="stat"><div class="stat-num">∞</div><div class="stat-lbl">أداة ذكاء اصطناعي</div></div>
@@ -1042,6 +1042,18 @@ footer .crest{
           </div>
       </div>
 
+      <div class="proj-item">
+        <div class="proj-num-big">12</div>
+        <div class="proj-content">
+          <h3>محاور دورتي في مجال الذكاء الاصطناعي</h3>
+          <p>منهج دورة تدريبية شاملة من إعدادي في الذكاء الاصطناعي — 28 محوراً تغطّي هندسة الأوامر، نماذج LLMs، أدوات (ChatGPT, Copilot, Claude Code, Blackbox, Base44, Nanobanana)، الوكلاء (AI Agents)، الأتمتة، وتطبيقات الذكاء الاصطناعي في البرمجة والتسويق والتصميم والربح.</p>
+          <div class="proj-meta"><span>28 محوراً</span><span>منهج تدريبي</span><span>AI Mastery</span></div>
+        </div>
+        <div class="proj-actions">
+            <button class="proj-btn" type="button" onclick="openGallery('ai-curriculum')"><i class="ti ti-photo"></i> معرض الصور</button>
+          </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -1115,7 +1127,8 @@ const galleries = {
   'news':         { title:'News CMS', imgs:seq('news',12) },
   'ashour-store': { title:'Ashour Store', imgs:['ashour-store-showcase.png'].concat(seq('ashour-store',5)) },
   'prompt-eng':   { title:'دورة هندسة الأوامر — Prompt Engineering', imgs:seq('prompt-eng',14) },
-  'ai-training':  { title:'دورة كلود (Claude) والتطوير بمساعدة الذكاء الاصطناعي', imgs:['ai-training-01-claude-course.png','ai-training-02.png','ai-training-03.png'] }
+  'ai-training':  { title:'دورة كلود (Claude) والتطوير بمساعدة الذكاء الاصطناعي', imgs:['ai-training-01-claude-course.png','ai-training-02.png','ai-training-03.png'] },
+  'ai-curriculum':{ title:'محاور دورتي في مجال الذكاء الاصطناعي', imgs:['ai-curriculum-01.png','ai-curriculum-02.png'] }
 };
 function openGallery(key){
   const data = galleries[key]; if(!data) return;
